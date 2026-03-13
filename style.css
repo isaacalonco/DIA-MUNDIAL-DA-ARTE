@@ -112,14 +112,39 @@ body {
 }
 
 
+.Van-Gogh{
+  position: absolute;
+  right: 120px;
+  top: 130px;      
+  width: 400px;   
+}
+
+.Van-Gogh img{
+  width: 100%;
+  height: auto;
+  rotate: 15deg;  
+}
+
 .luiz-gonzaga{
   position: absolute;
   right: 0;
-  top: 130px;      
-  width: 600px;   
+  top: 1670px;      
+  width: 400px;   
 }
 
 .luiz-gonzaga img{
+  width: 100%;
+  height: auto;
+}
+
+.neymar-junior{
+  position:absolute;
+  left: -20px;
+  top: 1015px;      
+  width: 368px;   
+}
+
+.neymar-junior img{
   width: 100%;
   height: auto;
 }
@@ -439,6 +464,23 @@ body {
     transform 0.2s ease,
     box-shadow 0.2s ease,
     background 0.2s ease;
+}
+
+/* Define largura da barra */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Cor do fundo da barra (track) */
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+/* Cor da parte móvel (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #9f0009;
+  border-radius: 10px;
 }
 
 /* RESPONSIVO */
