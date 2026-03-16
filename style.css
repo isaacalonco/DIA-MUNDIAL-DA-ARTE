@@ -17,7 +17,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background: #111827;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   color: #f9fafb;
@@ -122,7 +122,9 @@ body {
 .Van-Gogh img{
   width: 100%;
   height: auto;
-  rotate: 15deg;  
+  rotate: 15deg;
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 55%, transparent 100%);
 }
 
 .luiz-gonzaga{
@@ -135,6 +137,8 @@ body {
 .luiz-gonzaga img{
   width: 100%;
   height: auto;
+  mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
 }
 
 .neymar-junior{
@@ -147,6 +151,8 @@ body {
 .neymar-junior img{
   width: 100%;
   height: auto;
+  mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
 }
 
 /* SEÇÕES */
@@ -483,38 +489,112 @@ body {
   border-radius: 10px;
 }
 
-/* RESPONSIVO */
+/* =====================
+   RESPONSIVO
+   ===================== */
+
+/* Desktop grande (≤ 1440px) */
+@media (max-width: 1440px) {
+  .luiz-gonzaga {
+    top: 1500px;
+    width: 340px;
+  }
+
+  .neymar-junior {
+    top: 900px;
+    width: 320px;
+  }
+}
+
+/* Notebook (≤ 1280px) — Neymar e Luiz Gonzaga ocultados: top fixo não acompanha altura variável */
+@media (max-width: 1280px) {
+  .Van-Gogh {
+    right: 60px;
+    top: 110px;
+    width: 300px;
+  }
+
+  .luiz-gonzaga,
+  .neymar-junior {
+    display: none;
+  }
+}
+
+/* Notebook pequeno (≤ 1100px) */
+@media (max-width: 1100px) {
+  .Van-Gogh {
+    right: 20px;
+    top: 100px;
+    width: 240px;
+  }
+}
+
+/* Tablet (≤ 960px) */
 @media (max-width: 960px) {
+  /* Hero vira coluna única */
   .hero {
     grid-template-columns: 1fr;
     row-gap: 24px;
+    padding: 32px 32px 28px;
   }
 
-  .hero-right {
-    align-items: flex-start;
+  .hero-left {
+    padding-right: 0;
   }
 
+  /* Van Gogh também vira estático */
+  .Van-Gogh {
+    position: static;
+    width: 100%;
+    max-width: 280px;
+    margin: 16px auto 0;
+    display: block;
+  }
+
+  .Van-Gogh img {
+    rotate: 0deg;
+  }
+
+  /* Grids de 2 colunas → 1 coluna */
   .about-grid,
-  .info,
   .art-gallery-inner {
     grid-template-columns: 1fr;
   }
 
+  /* Info (educação) → 1 coluna */
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skills → 2 colunas */
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* Galeria → 2 colunas */
   .art-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* Seções com padding menor */
+  .section {
+    padding: 28px 32px 32px;
+  }
+
+  /* Rodapé em coluna */
   .footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 8px;
+    padding: 16px 32px;
+  }
+
+  .footer-text {
+    align-items: flex-start;
   }
 }
 
+/* Mobile (≤ 640px) */
 @media (max-width: 640px) {
   .hero,
   .section,
@@ -522,15 +602,54 @@ body {
     padding-inline: 16px;
   }
 
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+
   .hero-main {
     font-size: 2.1rem;
   }
 
+  .hero-quotes {
+    font-size: 2.6rem;
+  }
+
+  /* Skills → 1 coluna */
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
+  /* Galeria → 1 coluna */
   .art-row {
     grid-template-columns: 1fr;
+  }
+
+  /* stat-row não quebra */
+  .stat-row {
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    min-width: calc(50% - 5px);
+  }
+
+  .footer {
+    padding-inline: 16px;
+  }
+}
+
+/* Mobile pequeno (≤ 400px) */
+@media (max-width: 400px) {
+  .hero-main {
+    font-size: 1.7rem;
+  }
+
+  .hero-quotes {
+    font-size: 2rem;
+  }
+
+  .stat {
+    min-width: 100%;
   }
 }
