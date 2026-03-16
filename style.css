@@ -1,4 +1,3 @@
-/* RESET BÁSICO */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,8 +11,7 @@ body {
   min-height: 100vh;
 }
 
-/* PÁGINA PRINCIPAL (ocupando a tela toda) */
-.page {
+.art-page {
   width: 100%;
   min-height: 100vh;
   background: #111827;
@@ -23,20 +21,19 @@ body {
   color: #f9fafb;
 }
 
-/* HERO */
-.hero {
+.art-hero {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   padding: 40px 56px 36px;
   background: #111827;
 }
 
-.hero-left {
+.art-hero-content {
   padding-right: 24px;
   position: relative;
 }
 
-.hero-label {
+.art-hero-label {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 999px;
@@ -48,20 +45,20 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-title {
+.art-hero-title {
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
 
-.hero-quotes {
+.art-hero-quotes {
   font-size: 3.4rem;
   font-weight: 800;
   color: #9f0009;
   line-height: 0.9;
 }
 
-.hero-main {
+.art-hero-main {
   font-size: 2.8rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -70,14 +67,14 @@ body {
   color: #f9fafb;
 }
 
-.hero-subtitle {
+.art-hero-subtitle {
   margin-top: 16px;
   font-size: 0.98rem;
   color: #e5e7eb;
   max-width: 480px;
 }
 
-.hero-date {
+.art-hero-date {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #ffa4a8;
@@ -85,14 +82,14 @@ body {
   letter-spacing: 0.15em;
 }
 
-.hero-tags {
+.art-hero-tags {
   margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.pill {
+.art-pill {
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 0.8rem;
@@ -100,26 +97,25 @@ body {
   letter-spacing: 0.13em;
 }
 
-.pill-yellow {
+.art-pill-yellow {
   background: #9f0009;
   color: #f9fafb;
   font-weight: 600;
 }
 
-.pill-outline {
+.art-pill-outline {
   border: 1px solid rgba(248, 250, 252, 0.4);
   color: #e5e7eb;
 }
 
-
-.Van-Gogh{
+.art-van-gogh {
   position: absolute;
   right: 120px;
-  top: 130px;      
-  width: 400px;   
+  top: 130px;
+  width: 400px;
 }
 
-.Van-Gogh img{
+.art-van-gogh img {
   width: 100%;
   height: auto;
   rotate: 15deg;
@@ -127,74 +123,72 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 55%, transparent 100%);
 }
 
-.luiz-gonzaga{
+.art-luiz-gonzaga {
   position: absolute;
   right: 0;
-  top: 1670px;      
-  width: 400px;   
+  top: 1670px;
+  width: 400px;
 }
 
-.luiz-gonzaga img{
+.art-luiz-gonzaga img {
   width: 100%;
   height: auto;
   mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
 }
 
-.neymar-junior{
-  position:absolute;
+.art-neymar {
+  position: absolute;
   left: -20px;
-  top: 1015px;      
-  width: 368px;   
+  top: 1015px;
+  width: 368px;
 }
 
-.neymar-junior img{
+.art-neymar img {
   width: 100%;
   height: auto;
   mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
 }
 
-/* SEÇÕES */
-.section {
+.art-section {
   padding: 34px 56px 38px;
   border-bottom: 1px solid rgba(148, 163, 184, 0.18);
 }
 
-.section:last-of-type {
+.art-section:last-of-type {
   border-bottom: none;
 }
 
-.section-header {
+.art-section-header {
   margin-bottom: 16px;
 }
 
-.section-header.center {
+.art-center {
   text-align: center;
 }
 
-.section-kicker {
+.art-section-kicker {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: #9f0009;
 }
 
-.section h2 {
+.art-section h2 {
   font-size: 1.5rem;
   margin-top: 4px;
   color: #f9fafb;
 }
 
-/* SOBRE */
-.about-grid {
+.art-about-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 24px;
   align-items: flex-start;
 }
 
-.hello-title {
+.art-hello-title {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -202,121 +196,53 @@ body {
   margin-bottom: 8px;
 }
 
-.about-text p {
+.art-about-text p {
   font-size: 0.98rem;
   color: #e5e7eb;
   line-height: 1.7;
   margin-bottom: 10px;
 }
 
-.about-card {
-  background: #111827;
-  border-radius: 18px;
-  overflow: hidden;
-  color: #f9fafb;
-}
-
-.about-photo {
-  height: 120px;
-  background: linear-gradient(135deg, #9f0009, #9f0009);
-}
-
-.about-info {
-  padding: 14px 16px 16px;
-}
-
-.about-name {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.about-role {
-  display: block;
-  font-size: 0.8rem;
-  color: #d1d5db;
-  margin-bottom: 8px;
-}
-
-.about-note {
-  font-size: 0.85rem;
-  color: #e5e7eb;
-  line-height: 1.5;
-}
-
-/* INFO / EDUCAÇÃO */
-.info {
+.art-football {
   background: #020617;
-}
-
-.info {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 24px;
 }
 
-.info-column h3 {
+.art-info-column h3 {
   font-size: 1.5rem;
   margin-bottom: 8px;
 }
 
-.info-column span {
+.art-info-column span {
   color: #f8e320;
 }
 
-.info-column p {
+.art-info-column p {
   font-size: 0.95rem;
   color: #e5e7eb;
   line-height: 1.6;
 }
 
-.info-list {
+.art-info-list {
   list-style: none;
   margin-top: 10px;
   font-size: 0.92rem;
 }
 
-.info-list li {
+.art-info-list li {
   margin-bottom: 6px;
   color: #e5e7eb;
 }
 
-.info-list span {
+.art-info-list span {
   font-size: 15px;
   font-weight: 600;
   color: #9f0009;
 }
 
-.stat-row {
-  display: flex;
-  gap: 10px;
-  margin: 12px 0;
-}
-
-.stat {
-  flex: 1;
-  background: #111827;
-  color: #f9fafb;
-  border-radius: 14px;
-  padding: 10px;
-  text-align: center;
-}
-
-.stat-value {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #9f0009;
-}
-
-.stat-label {
-  display: block;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-}
-
-.quote {
+.art-quote {
   font-size: 0.9rem;
   color: #111827;
   margin-top: 8px;
@@ -324,39 +250,7 @@ body {
   border-left: 3px solid #9f0009;
 }
 
-/* SKILLS / ÍCONES */
-.skills-grid {
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.skill-card {
-  background: #111827;
-  color: #f9fafb;
-  border-radius: 18px;
-  padding: 16px 10px 14px;
-  text-align: center;
-}
-
-.skill-icon {
-  font-size: 1.6rem;
-  margin-bottom: 6px;
-}
-
-.skill-card h4 {
-  font-size: 0.95rem;
-  margin-bottom: 4px;
-}
-
-.skill-card p {
-  font-size: 0.8rem;
-  color: #d1d5db;
-}
-
-/* GALERIA DE ARTES */
-.art-gallery {
+.art-gallery-section {
   background: #020617;
   color: #f9fafb;
 }
@@ -374,13 +268,13 @@ body {
   line-height: 1.6;
 }
 
-.art-row {
+.art-gallery-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
-.art-row a {
+.art-gallery-row a {
   text-decoration: none;
 }
 
@@ -405,15 +299,13 @@ body {
   letter-spacing: 0.16em;
 }
 
-.art-piece img{
+.art-piece img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-/* RODAPÉ */
-.footer {
+.art-footer {
   padding: 14px 48px 16px;
   background: #9f0009;
   color: #f9fafb;
@@ -423,48 +315,47 @@ body {
   font-size: 0.85rem;
 }
 
-.footer-left {
+.art-footer-left {
   display: flex;
   flex-direction: column;
 }
 
-.footer-label {
+.art-footer-label {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 0.7rem;
   color: #9ca3af;
 }
 
-.footer-title {
+.art-footer-title {
   font-size: 0.98rem;
   font-weight: 600;
 }
 
-.footer-right {
+.art-footer-right {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.footer-text {
+.art-footer-text {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 2px;
 }
 
-.footer-meta strong {
+.art-footer-meta strong {
   color: #ffffff;
 }
 
-.footer-logo {
+.art-footer-logo {
   height: 40px;
   width: auto;
   object-fit: contain;
 }
 
-/* HOVER SUAVE PARA JS */
-.pill,
+.art-pill,
 .skill-card {
   transition:
     transform 0.2s ease,
@@ -472,78 +363,58 @@ body {
     background 0.2s ease;
 }
 
-/* Define largura da barra */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-/* Cor do fundo da barra (track) */
-::-webkit-scrollbar-track {
-  background: #020617;
-}
-
-/* Cor da parte móvel (thumb) */
-::-webkit-scrollbar-thumb {
-  background-color: #9f0009;
-  border-radius: 10px;
-}
-
-/* =====================
-   RESPONSIVO
-   ===================== */
-
-/* Desktop grande (≤ 1440px) */
 @media (max-width: 1440px) {
-  .luiz-gonzaga {
+
+  .art-luiz-gonzaga {
     top: 1500px;
     width: 340px;
   }
 
-  .neymar-junior {
+  .art-neymar {
     top: 900px;
     width: 320px;
   }
+
 }
 
-/* Notebook (≤ 1280px) — Neymar e Luiz Gonzaga ocultados: top fixo não acompanha altura variável */
 @media (max-width: 1280px) {
-  .Van-Gogh {
+
+  .art-van-gogh {
     right: 60px;
     top: 110px;
     width: 300px;
   }
 
-  .luiz-gonzaga,
-  .neymar-junior {
+  .art-luiz-gonzaga,
+  .art-neymar {
     display: none;
   }
+
 }
 
-/* Notebook pequeno (≤ 1100px) */
 @media (max-width: 1100px) {
-  .Van-Gogh {
+
+  .art-van-gogh {
     right: 20px;
     top: 100px;
     width: 240px;
   }
+
 }
 
-/* Tablet (≤ 960px) */
 @media (max-width: 960px) {
-  /* Hero vira coluna única */
-  .hero {
+
+  .art-hero {
     grid-template-columns: 1fr;
     row-gap: 24px;
     padding: 32px 32px 28px;
   }
 
-  .hero-left {
+  .art-hero-content {
     padding-right: 0;
   }
 
-  /* Van Gogh também vira estático */
-  .Van-Gogh {
+  .art-van-gogh {
     position: static;
     width: 100%;
     max-width: 280px;
@@ -551,105 +422,75 @@ body {
     display: block;
   }
 
-  .Van-Gogh img {
+  .art-van-gogh img {
     rotate: 0deg;
   }
 
-  /* Grids de 2 colunas → 1 coluna */
-  .about-grid,
+  .art-about-grid,
   .art-gallery-inner {
     grid-template-columns: 1fr;
   }
 
-  /* Info (educação) → 1 coluna */
-  .info {
+  .art-football {
     grid-template-columns: 1fr;
   }
 
-  /* Skills → 2 colunas */
-  .skills-grid {
+  .art-gallery-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Galeria → 2 colunas */
-  .art-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* Seções com padding menor */
-  .section {
+  .art-section {
     padding: 28px 32px 32px;
   }
 
-  /* Rodapé em coluna */
-  .footer {
+  .art-footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     padding: 16px 32px;
   }
 
-  .footer-text {
+  .art-footer-text {
     align-items: flex-start;
   }
+
 }
 
-/* Mobile (≤ 640px) */
 @media (max-width: 640px) {
-  .hero,
-  .section,
-  .footer {
+
+  .art-hero,
+  .art-section,
+  .art-footer {
     padding-inline: 16px;
   }
 
-  .hero {
+  .art-hero {
     padding-top: 24px;
     padding-bottom: 20px;
   }
 
-  .hero-main {
+  .art-hero-main {
     font-size: 2.1rem;
   }
 
-  .hero-quotes {
+  .art-hero-quotes {
     font-size: 2.6rem;
   }
 
-  /* Skills → 1 coluna */
-  .skills-grid {
+  .art-gallery-row {
     grid-template-columns: 1fr;
   }
 
-  /* Galeria → 1 coluna */
-  .art-row {
-    grid-template-columns: 1fr;
-  }
-
-  /* stat-row não quebra */
-  .stat-row {
-    flex-wrap: wrap;
-  }
-
-  .stat {
-    min-width: calc(50% - 5px);
-  }
-
-  .footer {
-    padding-inline: 16px;
-  }
 }
 
-/* Mobile pequeno (≤ 400px) */
 @media (max-width: 400px) {
-  .hero-main {
+
+  .art-hero-main {
     font-size: 1.7rem;
   }
 
-  .hero-quotes {
+  .art-hero-quotes {
     font-size: 2rem;
   }
 
-  .stat {
-    min-width: 100%;
-  }
 }
