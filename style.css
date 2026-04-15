@@ -1,496 +1,406 @@
-* {
+/* reset basico */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   font-family: "Poppins", sans-serif;
   background: #020617;
   color: #f9fafb;
   min-height: 100vh;
-}
-
-.art-page {
-  width: 100%;
-  min-height: 100vh;
-  background: #111827;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  color: #f9fafb;
 }
 
-.art-hero {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  padding: 40px 56px 36px;
-  background: #111827;
-}
-
-.art-hero-content {
-  padding-right: 24px;
-  position: relative;
-}
-
-.art-hero-label {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: #111827;
-  color: #ffa4a8;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin-bottom: 20px;
-}
-
-.art-hero-title {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.art-hero-quotes {
-  font-size: 3.4rem;
-  font-weight: 800;
-  color: #9f0009;
-  line-height: 0.9;
-}
-
-.art-hero-main {
-  font-size: 2.8rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 0.9;
-  color: #f9fafb;
-}
-
-.art-hero-subtitle {
-  margin-top: 16px;
-  font-size: 0.98rem;
-  color: #e5e7eb;
-  max-width: 480px;
-}
-
-.art-hero-date {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #ffa4a8;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
-.art-hero-tags {
-  margin-top: 22px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.art-pill {
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
-}
-
-.art-pill-yellow {
-  background: #9f0009;
-  color: #f9fafb;
-  font-weight: 600;
-}
-
-.art-pill-outline {
-  border: 1px solid rgba(248, 250, 252, 0.4);
-  color: #e5e7eb;
-}
-
-.art-van-gogh {
-  position: absolute;
-  right: 120px;
-  top: 130px;
-  width: 400px;
-}
-
-.art-van-gogh img {
-  width: 100%;
-  height: auto;
-  rotate: 15deg;
-  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 55%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 55%, transparent 100%);
-}
-
-.art-luiz-gonzaga {
-  position: absolute;
-  right: 0;
-  top: 1670px;
-  width: 400px;
-}
-
-.art-luiz-gonzaga img {
-  width: 100%;
-  height: auto;
-  mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
-}
-
-.art-neymar {
-  position: absolute;
-  left: -20px;
-  top: 1015px;
-  width: 368px;
-}
-
-.art-neymar img {
-  width: 100%;
-  height: auto;
-  mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 90% at 50% 50%, black 55%, transparent 100%);
-}
-
-.art-section {
-  padding: 34px 56px 38px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.art-section:last-of-type {
-  border-bottom: none;
-}
-
-.art-section-header {
-  margin-bottom: 16px;
-}
-
-.art-center {
-  text-align: center;
-}
-
-.art-section-kicker {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: #9f0009;
-}
-
-.art-section h2 {
-  font-size: 1.5rem;
-  margin-top: 4px;
-  color: #f9fafb;
-}
-
-.art-about-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-.art-hello-title {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #9f0009;
-  margin-bottom: 8px;
-}
-
-.art-about-text p {
-  font-size: 0.98rem;
-  color: #e5e7eb;
-  line-height: 1.7;
-  margin-bottom: 10px;
-}
-
-.art-football {
-  background: #020617;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 24px;
-}
-
-.art-info-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-
-.art-info-column span {
-  color: #f8e320;
-}
-
-.art-info-column p {
-  font-size: 0.95rem;
-  color: #e5e7eb;
-  line-height: 1.6;
-}
-
-.art-info-list {
-  list-style: none;
-  margin-top: 10px;
-  font-size: 0.92rem;
-}
-
-.art-info-list li {
-  margin-bottom: 6px;
-  color: #e5e7eb;
-}
-
-.art-info-list span {
-  font-size: 15px;
-  font-weight: 600;
-  color: #9f0009;
-}
-
-.art-quote {
-  font-size: 0.9rem;
-  color: #111827;
-  margin-top: 8px;
-  padding-left: 10px;
-  border-left: 3px solid #9f0009;
-}
-
-.art-gallery-section {
-  background: #020617;
-  color: #f9fafb;
-}
-
-.art-gallery-inner {
-  display: grid;
-  grid-template-columns: 1.4fr 1.6fr;
-  gap: 20px;
-  align-items: stretch;
-}
-
-.art-gallery-text p {
-  font-size: 0.95rem;
-  color: #e5e7eb;
-  line-height: 1.6;
-}
-
-.art-gallery-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.art-gallery-row a {
-  text-decoration: none;
-}
-
-.art-piece {
-  border-radius: 18px;
-  overflow: hidden;
-  position: relative;
-  min-height: 140px;
-  background: #020617;
-}
-
-.art-piece::after {
-  content: attr(data-label);
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(17, 24, 39, 0.8);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-}
-
-.art-piece img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.art-footer {
-  padding: 14px 48px 16px;
-  background: #9f0009;
-  color: #f9fafb;
+/* menu topo */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
+  padding: 14px clamp(32px, 15%, 200px);
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.art-footer-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.art-footer-label {
+.titulo {
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.7rem;
-  color: #9ca3af;
-}
-
-.art-footer-title {
-  font-size: 0.98rem;
+  letter-spacing: 0.22em;
+  color: #ffa4a8;
   font-weight: 600;
 }
 
-.art-footer-right {
+.navbar {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  gap: 28px;
+  list-style: none;
 }
 
-.art-footer-text {
+.navbar a {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar a:hover { color: #ffa4a8; }
+
+/* banner principal */
+.banner {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 100px clamp(32px, 15%, 200px) 60px;
+  background: #111827;
+  overflow: hidden;
+  gap: 48px;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(159, 0, 9, 0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.fundo-video {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fundo-video iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 177.78vh;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fundo-video iframe {
+    width: 100vw;
+    height: 56.25vw;
+  }
+}
+
+.lado-esquerdo { position: relative; z-index: 1; }
+.lado-direito  { position: relative; z-index: 1; }
+
+.etiqueta-data {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: rgba(159, 0, 9, 0.22);
+  border: 1px solid rgba(159, 0, 9, 0.5);
+  color: #ffa4a8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
+}
+
+.titulo-principal {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: #9f0009;
+  margin-bottom: 24px;
+}
+
+.titulo-principal .texto-claro { color: #f9fafb; }
+
+.subtitulo {
+  font-size: 1rem;
+  color: #b1c2da;
+  line-height: 1.75;
+  max-width: 440px;
+  margin-bottom: 32px;
+}
+
+.grupo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.etiqueta {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.etiqueta-vermelha { background: #9f0009; color: #fff; font-weight: 700; }
+.etiqueta-contorno { border: 1px solid rgba(255, 255, 255, 0.25); color: #e5e7eb; }
+
+.caixa-sobre {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 60px;
+  backdrop-filter: blur(4px);
+}
+
+.texto-secao {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #ffa4a8;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.caixa-sobre h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.saudacao {
+  font-size: 0.85rem;
+  color: #ffa4a8;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.caixa-sobre p {
+  font-size: 0.92rem;
+  color: #e5e7eb;
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+/* secoes */
+.bloco {
+  padding: 80px clamp(32px, 15%, 200px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.bloco:last-of-type { border-bottom: none; }
+
+.bloco-escuro { background: #020617; }
+.bloco-azul   { background: #111827; }
+
+.cabecalho-bloco { margin-bottom: 40px; }
+.cabecalho-bloco.centralizado { text-align: center; }
+
+.cabecalho-bloco h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 6px;
+}
+
+.colunas-futebol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.cartao {
+  border-radius: 16px;
+  padding: 28px 28px 32px;
+}
+
+.cartao h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #f9fafb;
+}
+
+.cartao .destaque { color: #f8e320; }
+
+.cartao p {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.lista-arte {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lista-arte li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #e5e7eb;
+  padding: 10px 14px;
+  background: rgba(159, 0, 9, 0.07);
+  border-left: 3px solid #9f0009;
+  border-radius: 0 8px 8px 0;
+}
+
+.lista-arte li strong {
+  color: #ffa4a8;
+  min-width: 110px;
+  font-weight: 700;
+}
+
+.bloco-citacao {
+  border-left: 4px solid #9f0009;
+  padding: 12px 18px;
+  margin: 18px 0;
+  background: rgba(159, 0, 9, 0.08);
+  border-radius: 0 10px 10px 0;
+}
+
+.bloco-citacao p {
+  font-size: 0.9rem;
+  color: #b1c2da;
+  font-style: italic;
+}
+
+.caixa-video {
+  margin-top: 20px;
+  padding-top: 56.25%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.caixa-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.texto-musica {
+  font-size: 0.93rem;
+  color: #b1c2da;
+  line-height: 1.75;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.caixa-spotify {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.texto-galeria {
+  font-size: 0.93rem;
+  color: #b1c2da;
+  margin-bottom: 24px;
+}
+
+.grade-fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.foto-arte {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4;
+  background: #111827;
+  cursor: pointer;
+}
+
+.foto-arte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.foto-arte:hover img { transform: scale(1.06); }
+
+.foto-arte a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nome-artista {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: rgba(2, 6, 23, 0.85);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #e5e7eb;
+}
+
+/* FOOTER */
+footer {
+  background: #9f0009;
+  padding: 22px clamp(32px, 15%, 200px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-esquerda { display: flex; flex-direction: column; }
+
+.footer-titulo { font-size: 1rem; font-weight: 700; }
+
+.footer-direita {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 2px;
+  font-size: 0.85rem;
 }
 
-.art-footer-meta strong {
-  color: #ffffff;
-}
+.footer-info strong { color: #fff; }
 
-.art-footer-logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
+.logo-footer { height: 42px; width: auto; }
 
-.art-pill,
-.skill-card {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-@media (max-width: 1440px) {
-
-  .art-luiz-gonzaga {
-    top: 1500px;
-    width: 340px;
-  }
-
-  .art-neymar {
-    top: 900px;
-    width: 320px;
-  }
-
-}
-
-@media (max-width: 1280px) {
-
-  .art-van-gogh {
-    right: 60px;
-    top: 110px;
-    width: 300px;
-  }
-
-  .art-luiz-gonzaga,
-  .art-neymar {
-    display: none;
-  }
-
-}
-
-@media (max-width: 1100px) {
-
-  .art-van-gogh {
-    right: 20px;
-    top: 100px;
-    width: 240px;
-  }
-
-}
-
+/* responsivo */
 @media (max-width: 960px) {
-
-  .art-hero {
-    grid-template-columns: 1fr;
-    row-gap: 24px;
-    padding: 32px 32px 28px;
-  }
-
-  .art-hero-content {
-    padding-right: 0;
-  }
-
-  .art-van-gogh {
-    position: static;
-    width: 100%;
-    max-width: 280px;
-    margin: 16px auto 0;
-    display: block;
-  }
-
-  .art-van-gogh img {
-    rotate: 0deg;
-  }
-
-  .art-about-grid,
-  .art-gallery-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .art-football {
-    grid-template-columns: 1fr;
-  }
-
-  .art-gallery-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .art-section {
-    padding: 28px 32px 32px;
-  }
-
-  .art-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 16px 32px;
-  }
-
-  .art-footer-text {
-    align-items: flex-start;
-  }
-
+  .banner          { grid-template-columns: 1fr; padding-top: 90px; }
+  .colunas-futebol { grid-template-columns: 1fr; }
+  .grade-fotos     { grid-template-columns: repeat(2, 1fr); }
+  footer           { flex-direction: column; align-items: flex-start; }
+  .footer-info     { align-items: flex-start; }
 }
 
-@media (max-width: 640px) {
-
-  .art-hero,
-  .art-section,
-  .art-footer {
-    padding-inline: 16px;
-  }
-
-  .art-hero {
-    padding-top: 24px;
-    padding-bottom: 20px;
-  }
-
-  .art-hero-main {
-    font-size: 2.1rem;
-  }
-
-  .art-hero-quotes {
-    font-size: 2.6rem;
-  }
-
-  .art-gallery-row {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-@media (max-width: 400px) {
-
-  .art-hero-main {
-    font-size: 1.7rem;
-  }
-
-  .art-hero-quotes {
-    font-size: 2rem;
-  }
-
+@media (max-width: 600px) {
+  .titulo-principal { font-size: 2.6rem; }
+  .grade-fotos      { grid-template-columns: 1fr; }
+  .lista-menu       { display: none; }
 }
